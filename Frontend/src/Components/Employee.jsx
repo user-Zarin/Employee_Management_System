@@ -19,7 +19,7 @@ const Employee = () => {
       .catch((err) => console.log(err));
   }, []);
   const handleDelete = (id) => {
-    axios.delete('http://localhost:3000/auth/delete_employee/'+id)
+    axios.delete('https://employee-management-system-qx5m.onrender.com/auth/delete_employee/'+id)
     .then(result => {
         if(result.data.Status) {
             window.location.reload()
