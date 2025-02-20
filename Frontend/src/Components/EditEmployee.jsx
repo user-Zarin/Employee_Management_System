@@ -15,7 +15,7 @@ const EditEmployee = () => {
       const navigate = useNavigate()
 
       useEffect(()=> {
-        axios.get('http://localhost:3000/auth/category')
+        axios.get('https://employee-management-system-qx5m.onrender.com/auth/category')
         .then(result => {
             if(result.data.Status) {
                 setCategory(result.data.Result);
