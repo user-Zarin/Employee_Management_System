@@ -24,7 +24,7 @@ const EditEmployee = () => {
             }
         }).catch(err => console.log(err))
 
-        axios.get('http://localhost:3000/auth/employee/'+id)
+        axios.get('https://employee-management-system-qx5m.onrender.com/auth/employee/'+id)
         .then(result => {
             setEmployee({
                 ...employee,
@@ -39,7 +39,7 @@ const EditEmployee = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.put('http://localhost:3000/auth/edit_employee/'+id, employee)
+        axios.put('https://employee-management-system-qx5m.onrender.com/auth/edit_employee/'+id, employee)
         .then(result => {
             if(result.data.Status) {
                 navigate('/dashboard/employee')
