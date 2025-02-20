@@ -8,7 +8,7 @@ const Dashboard = () => {
   const navigate = useNavigate()
   axios.defaults.withCredentials = true
   const handleLogout = () => {
-    axios.get('http://localhost:3000/auth/logout')
+    axios.get('https://employee-management-system-qx5m.onrender.com/auth/logout')
     .then(result => {
       if(result.data.Status) { 
         localStorage.removeItem("valid")
