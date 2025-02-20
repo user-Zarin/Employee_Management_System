@@ -8,7 +8,7 @@ const Employee = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/auth/employee")
+      .get("https://employee-management-system-qx5m.onrender.com/auth/employee")
       .then((result) => {
         if (result.data.Status) {
           setEmployee(result.data.Result);
