@@ -8,14 +8,14 @@ const EmployeeDetail = () => {
     const {id} = useParams()
     const navigate = useNavigate()
     useEffect(() => {
-        axios.get('http://localhost:3000/employee/detail/'+id)
+        axios.get('https://employee-management-system-qx5m.onrender.com/employee/detail/'+id)
         .then(result => {
             setEmployee(result.data[0])
         })
         .catch(err => console.log(err))
     }, [])
     const handleLogout = () => {
-        axios.get('http://localhost:3000/employee/logout')
+        axios.get('https://employee-management-system-qx5m.onrender.com/employee/logout')
         .then(result => {
           if(result.data.Status) {
             localStorage.removeItem("valid")
